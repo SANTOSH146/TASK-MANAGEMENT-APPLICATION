@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Application</title>
+  <link rel="stylesheet" href="static\css\style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Manage your Tasks</h1>
+    <div id="task-list"></div>
+    <button id="add-task-btn">Add Task</button>
+
+    <!-- Class Modal for Adding/Editing Tasks -->
+    <div id="task-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Add Task</h2>
+        <form id="task-form">
+          <input type="hidden" id="task-id">
+          <div>
+            <label for="title" >Title</label>
+            <input type="text" id="title" name="title" style="margin-left:48px;" required>
+          </div><br>
+          <div>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+          </div><br>
+          <div>
+            <label for="due-date">Due Date</label>
+            <input type="date" id="due-date" name="due-date" style="margin-left:13px;" required>
+          </div>
+          <button type="submit" id="save-task-btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Details of Tasks Added -->
+    <div id="task-details" class="modal">
+      <div class="modal-content">
+        <span class="close-details">&times;</span>
+        <h2>Task Details</h2>
+        <div>
+          <bold>Title:</bold> <span id="details-title"></span>
+        </div>
+        <div>
+          <bold>Description:</bold> <span id="details-description"></span>
+        </div>
+        <div>
+          <bold>Due Date:</bold> <span id="details-due-date"></span>
+        </div>
+        <div class="btn-group">
+          <button id="edit-task-btn">Edit</button>
+          <button id="delete-task-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+ <script src="script.js"></script>  <!-- javascript file connection   -->
+</body>
+</html>
