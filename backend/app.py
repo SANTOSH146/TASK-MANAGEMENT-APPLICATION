@@ -6,7 +6,7 @@ from flask_cors import CORS
 app = Flask(__name__, static_url_path='', static_folder='../frontend')
 CORS(app)
 
-# MySQL database configuration details  
+# MySQL database configuration details
 db_config = {
     'user': 'root',
     'password': '146752',
